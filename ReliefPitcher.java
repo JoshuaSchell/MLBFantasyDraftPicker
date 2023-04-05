@@ -1,7 +1,7 @@
 public class ReliefPitcher implements Player{
 
     private String name;
-    private int K, SV;
+    private int K, SV, POS;
     private double WHIP, ERA;
 
     public ReliefPitcher(String name, int SVs, int Ks, double WHIP, double ERA) {
@@ -50,5 +50,10 @@ public class ReliefPitcher implements Player{
 
     public void setWHIP(double WHIP) {
         this.WHIP = WHIP;
+    }
+
+    @Override
+    public void setPlayerExpectedDraftPos(int POS) {
+        this.POS = POS;
     }
 }

@@ -1,8 +1,8 @@
-public class Batter {
+public class Batter implements Player {
 
     private String name;
     private String position;
-    private int HR, SB, RUNS, RBI;
+    private int HR, SB, RUNS, RBI, POS;
     private double AVG;
 
     public Batter(String name, double AVG, int HRs, int SBs, int RUNs, int RBIs, String position) {
@@ -69,5 +69,10 @@ public class Batter {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    @Override
+    public void setPlayerExpectedDraftPos(int POS) {
+        this.POS = POS;
     }
 }

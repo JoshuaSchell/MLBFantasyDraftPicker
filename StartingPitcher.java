@@ -1,7 +1,7 @@
 public class StartingPitcher implements Player {
 
     private String name;
-    private int WINS, K;
+    private int WINS, K, POS;
     private double WHIP, ERA;
 
     public StartingPitcher(String name, int Wins, int Ks, double WHIP, double ERA) {
@@ -50,5 +50,10 @@ public class StartingPitcher implements Player {
 
     public void setWINS(int WINS) {
         this.WINS = WINS;
+    }
+
+    @Override
+    public void setPlayerExpectedDraftPos(int POS) {
+        this.POS = POS;
     }
 }
